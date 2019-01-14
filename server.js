@@ -33,7 +33,7 @@ var ip = request.headers['x-forwarded-for'] ||
  console.log(ip);
 var language = request.get('accept-language')
 var userObject = {
-  "ipaddress": request.ip,
+  "ipaddress": ip,
   "language": language.split(',')[0],
   "Software":request.headers['user-agent']
 }
